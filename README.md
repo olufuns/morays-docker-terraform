@@ -264,7 +264,7 @@ It will ask for another explicit confirmation. **Never use this cleanup to delet
 
 commands to run:
 
-cd ~/morays-project/unzip/morays-ecs-terraform
+cd ~/morays-project/morays-docker-terraform
 
 ls -la
 

@@ -1,6 +1,6 @@
 # Separate state: ECR must exist before a Docker image can be pushed.
 resource "aws_ecr_repository" "website" {
-  name                 = "morays-ecs-website"
+  name                 = "morays-ecs-website-terraform"
   image_tag_mutability = "IMMUTABLE"
   force_delete         = true # Lab only: destroys images when this repository is destroyed.
 

@@ -1,12 +1,12 @@
 # The ALB is internet-facing and spans two public subnets.
 resource "aws_lb" "website" {
-  name               = "${var.project_name}-alb"
-  internal           = false
-  load_balancer_type = "application"
-  security_groups    = [aws_security_group.alb.id]
-  subnets            = aws_subnet.public[*].id
+  name                       = "${var.project_name}-alb"
+  internal                   = false
+  load_balancer_type         = "application"
+  security_groups            = [aws_security_group.alb.id]
+  subnets                    = aws_subnet.public[*].id
   enable_deletion_protection = false
-  tags = { Name = "${var.project_name}-alb" }
+  tags                       = { Name = "${var.project_name}-alb" }
 }
 
 # Fargate uses ENIs/IP addresses, not EC2 instance targets.
